@@ -1,4 +1,4 @@
-package com.qiubit.demo;
+package com.qiubit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
