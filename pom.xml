@@ -12,6 +12,15 @@
 	<name>qiubit</name>
 	<description>Demo project for Spring Boot</description>
 
+	<modules>
+		<module>qiubit-web</module>
+		<module>qiubit-rest</module>
+		<module>quibit-excepiton</module>
+		<module>qiubit-orm</module>
+		<module>qiubit-conf</module>
+		<module>qiubit-appliction-impl</module>
+		<module>qiubit-appliction</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -51,18 +60,7 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.2.0</version>
 		</dependency>
-
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<!--thymeleaf -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+		
 		<!--commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -81,14 +79,4 @@
 		</plugins>
 	</build>
 
-
-	<modules>
-		<module>qiubit-web</module>
-		<module>qiubit-rest</module>
-		<module>quibit-excepiton</module>
-		<module>qiubit-orm</module>
-		<module>qiubit-conf</module>
-		<module>qiubit-appliction-impl</module>
-		<module>qiubit-appliction</module>
-	</modules>
 </project>
