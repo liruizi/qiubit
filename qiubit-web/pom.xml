@@ -31,11 +31,5 @@
 			<artifactId>qiubit-application</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-conf</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 	</dependencies>
 </project>
