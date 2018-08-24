@@ -20,6 +20,7 @@
 		<module>qiubit-conf</module>
 		<module>qiubit-appliction-impl</module>
 		<module>qiubit-appliction</module>
+		<module>qiubit-commons</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -60,7 +61,6 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.2.0</version>
 		</dependency>
-		
 		<!--commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>

@@ -20,5 +20,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+
+		<dependency>
+            <groupId>com.qiubit</groupId>
+            <artifactId>qiubit-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <!--   <dependency>
+            <groupId>com.qiubit</groupId>
+            <artifactId>qiubit-application</artifactId>
+            <version>${project.version}</version>
+        </dependency> -->
+		
+
 	</dependencies>
 </project>
