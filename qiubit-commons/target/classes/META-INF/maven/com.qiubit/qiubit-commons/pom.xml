@@ -8,14 +8,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>qiubit-commons</artifactId>
-	
-	
+
+
 	<dependencies>
-		<!-- mysql -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
+			<groupId>com.qiubit</groupId>
+			<artifactId>qiubit-conf</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>
