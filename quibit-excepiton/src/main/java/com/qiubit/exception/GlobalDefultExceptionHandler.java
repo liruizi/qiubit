@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.qiubit.util.BusinessException;
 import com.qiubit.util.Result;
 import com.qiubit.util.ResultUtil;
 

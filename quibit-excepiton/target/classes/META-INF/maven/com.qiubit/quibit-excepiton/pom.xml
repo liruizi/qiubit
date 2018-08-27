@@ -15,25 +15,5 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-application</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-application-impl</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-rest</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-web</artifactId>
-			<version>${project.version}</version>
-		</dependency>
 	</dependencies>
 </project>

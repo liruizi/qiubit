@@ -36,5 +36,10 @@
 			<artifactId>qiubit-conf</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.qiubit</groupId>
+			<artifactId>quibit-excepiton</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>
