@@ -15,7 +15,6 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>com.qiubit</groupId>
 			<artifactId>qiubit-application</artifactId>

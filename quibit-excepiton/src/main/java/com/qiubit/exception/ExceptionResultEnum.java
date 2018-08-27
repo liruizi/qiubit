@@ -1,4 +1,4 @@
-package com.qiubit.util;
+package com.qiubit.exception;
 
 public enum ExceptionResultEnum {
 	UNKONW_ERROR(-1, "未知错误"), SUCCESS(0, "成功"), ERROR(1, "失败"),;

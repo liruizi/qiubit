@@ -1,4 +1,4 @@
-package com.qiubit.util;
+package com.qiubit.exception;
 
 public class BusinessException extends RuntimeException {
 
