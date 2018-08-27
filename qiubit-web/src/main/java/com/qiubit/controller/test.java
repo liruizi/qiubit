@@ -5,6 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.qiubit.exception.BusinessException;
+import com.qiubit.exception.ExceptionResultEnum;
+
 @Controller
 public class test {
 	private final Logger logger = LoggerFactory.getLogger(test.class);
@@ -18,6 +22,10 @@ public class test {
 	@GetMapping("/admin/login")
 	public String loginGet(Model model) {
 		logger.info("kais kais ");
+		String  ssString="";
+		if (ssString=="") {
+			throw new BusinessException(ExceptionResultEnum.UNKONW_ERROR);
+		}
 		return "login";
 	}
 }
