@@ -15,11 +15,6 @@
 			<artifactId>qiubit-commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.qiubit</groupId>
-			<artifactId>qiubit-application-impl</artifactId>
-			<version>${project.version}</version>
-		</dependency>
 
 	</dependencies>
 </project>
