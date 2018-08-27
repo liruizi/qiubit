@@ -16,10 +16,7 @@
 		<module>qiubit-web</module>
 		<module>qiubit-rest</module>
 		<module>quibit-excepiton</module>
-		<module>qiubit-orm</module>
 		<module>qiubit-conf</module>
-		<module>qiubit-appliction-impl</module>
-		<module>qiubit-appliction</module>
 		<module>qiubit-commons</module>
 		<module>qiubit-application</module>
 		<module>qiubit-application-impl</module>
