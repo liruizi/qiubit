@@ -9,20 +9,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/v1/rest/account", produces = { "application/JSON" })
+@RequestMapping(value = "/v1/rest/account")
 public class AccountController {
 
 	private final Logger logger = LoggerFactory.getLogger(AccountController.class);
 
-	@GetMapping()
-	public String index(Model model) {
-		logger.info("访问index首页");
+	
+	@GetMapping("/login")
+	public String login(Model model) {
+		logger.info("用户点击登陆操作");
 		return "login";
 	}
 	
-	@PostMapping("/login")
-	public String login(Model model) {
-		logger.info("用户点击登陆操作");
+	@PostMapping("/login/userinfo")
+	public String loginUserInfo(String userName,String password) {
+		logger.info("userName="+userName + ",password="+password);
 		return "login";
 	}
 
