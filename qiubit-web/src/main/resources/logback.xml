@@ -6,8 +6,10 @@
 
 	<property name="LOG_HOME" value="logs" />
 
-	<appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<!--如果只是想要 Info 级别的日志，只是过滤 info 还是会输出 Error 日志，因为 Error 的级别高， 所以我们使用下面的策略，可以避免输出 Error 的日志 -->
+	<appender name="fileInfoLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--如果只是想要 Info 级别的日志，只是过滤 info 还是会输出 Error 日志，因为 Error 的级别高， 所以我们使用下面的策略，可以避免输出 
+			Error 的日志 -->
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<!--过滤 Error -->
 			<level>ERROR,WARN</level>
@@ -20,9 +22,11 @@
 			的日志改名为今天的日期。即，<File> 的日志都是当天的。 -->
 		<File>${LOG_HOME}/qiubit_info.log</File>
 		<!--滚动策略，按照时间滚动 TimeBasedRollingPolicy -->
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间 -->
-			<FileNamePattern>${LOG_HOME}/qiubit_info.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<FileNamePattern>${LOG_HOME}/qiubit_info.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
 			<!--只保留最近90天的日志 -->
 			<maxHistory>90</maxHistory>
 			<!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志 -->
@@ -36,7 +40,8 @@
 	</appender>
 
 
-	<appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="fileErrorLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!--如果只是想要 Error 级别的日志，那么需要过滤一下，默认是 info 级别的，ThresholdFilter -->
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>Error</level>
@@ -48,7 +53,8 @@
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间 -->
-			<FileNamePattern>${LOG_HOME}/qiubit_error.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<FileNamePattern>${LOG_HOME}/qiubit_error.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
 			<!--只保留最近90天的日志 -->
 			<maxHistory>90</maxHistory>
 			<!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志 -->
@@ -60,8 +66,9 @@
 			<pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</pattern>
 		</encoder>
 	</appender>
-	
-	<appender name="fileWarnLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+	<appender name="fileWarnLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!--如果只是想要 Error 级别的日志，那么需要过滤一下，默认是 info 级别的，ThresholdFilter -->
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>Warn</level>
@@ -73,7 +80,8 @@
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间 -->
-			<FileNamePattern>${LOG_HOME}/qiubit_warn.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<FileNamePattern>${LOG_HOME}/qiubit_warn.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
 			<!--只保留最近90天的日志 -->
 			<maxHistory>90</maxHistory>
 			<!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志 -->
@@ -86,19 +94,30 @@
 		</encoder>
 	</appender>
 
-	<!--控制台输出日志  -->
-   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%date{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) (%file:%line\)- %m%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
+	<!--控制台输出日志 -->
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %highlight(%-5level)
+				(%file:%line\)- %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="catAppender"
+		class="com.dianping.cat.logback.CatLogbackAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+	</appender>
+
 
 	<root level="INFO">
+		<appender-ref ref="catAppender" />
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="fileInfoLog" />
 		<appender-ref ref="fileErrorLog" />
 		<appender-ref ref="fileWarnLog" />
 	</root>
-	
+
 </configuration>
